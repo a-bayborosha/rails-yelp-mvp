@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <h1><%= @movie.title%></h1>
+    <hr>
+    <div class="wrapper">
+      <h3><%= "Rating: #{@movie.rating}"%></h3>
+      <div class="description">
+        <h2 class="description__title">Overview</h2>
+        <div class="description__body">
+          <h3><%= @movie.overview%></h3>
+        </div>
+      </div>
+      <%= image_tag @movie.poster_url, width: '300' %>
+    </div>
+    <div class="actions">
+    <br>
+     <button><%= link_to "Back to main page", movies_path %></button>
+    </div>
+</div>

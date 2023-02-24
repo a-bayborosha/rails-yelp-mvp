@@ -1,0 +1,12 @@
+<div class="container mt-5">
+  <h1>Movies</h1>
+    <ul>
+    <% @movies.each do |movie|%>
+   <li> <%= link_to movie.title, movie_path(movie.id) %> </li>
+    <% end %>
+    </ul>
+    <div class="actions">
+    <br>
+     <button><%= link_to "Add a new movie to list", new_movie_path %></button>
+    </div>
+</div>
